@@ -108,7 +108,7 @@ body {
 }
 
 /* Responsive Menu */
-@media (max-width: 768px) {
+@media (width: 100vw) {
     .nav-links {
         display: none;
         flex-direction: column;

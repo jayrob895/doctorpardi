@@ -5,10 +5,23 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', sans-serif;
-    color: #2C2C2C;
-    background-color: #FAFAFA;
-    line-height: 1.6;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #000;
+    background-color: #FFCC00; /* Bright yellow background */
+    background-image: url('https://i.imgur.com/3QZQZQZ.png'); /* Tiled animated GIF background */
+    background-repeat: repeat;
+    line-height: 1.5;
+}
+
+/* Blinking Text */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.blink {
+    animation: blink 1s infinite;
 }
 
 /* Navbar */
@@ -16,17 +29,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #0A1F3D;
-    color: #F5F5F5;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #FF00FF; /* Bright pink */
+    border: 5px solid #00FF00; /* Bright green border */
+    color: #0000FF; /* Bright blue text */
 }
 
 .nav-logo {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
-    letter-spacing: 1px;
-    color: #D4AF37; /* Gold for the logo */
+    color: #FF0000; /* Bright red */
+    text-shadow: 2px 2px 0 #00FF00; /* Green shadow */
 }
 
 .nav-links {
@@ -35,118 +48,116 @@ body {
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 .nav-links a {
-    color: #F5F5F5;
+    color: #0000FF; /* Bright blue */
     text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #D4AF37; /* Gold on hover */
-    transform: translateY(-2px);
+    color: #FF0000; /* Bright red on hover */
+    text-decoration: underline;
 }
 
 .hamburger {
     display: none;
     font-size: 1.5em;
     cursor: pointer;
-    color: #F5F5F5;
+    color: #0000FF; /* Bright blue */
 }
 
 /* Hero Section */
 .hero {
-    height: 70vh;
-    background: linear-gradient(rgba(10, 31, 61, 0.8), rgba(10, 31, 61, 0.8)), url('https://via.placeholder.com/1200x400') center/cover;
+    height: 60vh;
+    background: url('https://i.imgur.com/4QZQZQZ.gif') center/cover; /* Animated GIF background */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #F5F5F5;
+    color: #FFFFFF; /* White text */
     text-align: center;
     padding: 20px;
-    animation: fadeIn 1.5s ease-in-out;
+    border: 10px dashed #FF00FF; /* Bright pink dashed border */
 }
 
 .hero-text h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    color: #D4AF37; /* Gold for the heading */
+    color: #00FF00; /* Bright green */
+    text-shadow: 3px 3px 0 #FF0000; /* Red shadow */
 }
 
 .hero-text p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 30px;
-    max-width: 600px;
-    line-height: 1.8;
+    color: #0000FF; /* Bright blue */
 }
 
 .btn {
     text-decoration: none;
-    background-color: #D4AF37; /* Gold button */
-    color: #0A1F3D; /* Navy text */
+    background-color: #00FF00; /* Bright green */
+    color: #0000FF; /* Bright blue */
     padding: 12px 25px;
-    border-radius: 5px;
+    border-radius: 10px;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 3px solid #FF00FF; /* Bright pink border */
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #B5942E; /* Darker gold on hover */
-    transform: translateY(-2px);
+    background-color: #FF0000; /* Bright red on hover */
+    color: #00FF00; /* Bright green text */
 }
 
 /* Container Section */
 .container {
-    padding: 60px 20px;
+    padding: 40px 20px;
     max-width: 1000px;
     margin: auto;
     text-align: center;
+    background-color: #FFFFFF; /* White background */
+    border: 5px solid #0000FF; /* Bright blue border */
 }
 
 .container h2 {
-    color: #0A1F3D; /* Navy for headings */
+    color: #FF00FF; /* Bright pink */
     margin-bottom: 20px;
-    font-size: 2.2em;
-    position: relative;
-}
-
-.container h2::after {
-    content: '';
-    width: 60px;
-    height: 3px;
-    background-color: #D4AF37; /* Gold line under headings */
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 2.5em;
+    text-decoration: underline;
 }
 
 .container p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 1.8;
-    color: #555;
+    color: #0000FF; /* Bright blue */
 }
 
 /* Footer */
 .footer {
-    background-color: #0A1F3D; /* Navy footer */
-    color: #F5F5F5;
+    background-color: #0000FF; /* Bright blue */
+    color: #FFFFFF; /* White text */
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     position: relative;
     bottom: 0;
     width: 100%;
     margin-top: 40px;
+    border-top: 5px solid #FF00FF; /* Bright pink border */
 }
 
 .footer p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 1em;
+}
+
+/* Visitor Counter */
+.visitor-counter {
+    font-size: 1.5em;
+    color: #FF0000; /* Bright red */
+    margin-top: 10px;
 }
 
 /* Responsive Menu */
@@ -154,7 +165,7 @@ body {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #0A1F3D;
+        background-color: #FF00FF; /* Bright pink */
         position: absolute;
         top: 60px;
         left: 0;
@@ -181,15 +192,5 @@ body {
 
     .hero-text p {
         font-size: 1em;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }

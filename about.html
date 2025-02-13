@@ -6,7 +6,28 @@
     <title>About</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+        <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">Dr. Pardi Orthopedics</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 <div class="container">
     <h2>About Dr. Brandon Pardi</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dr. Pardi is committed to delivering personalized orthopedic care.</p>
 </div>
+        <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>

@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    color: #2C2C2C;
-    background-color: #FAFAFA;
+    color: #333;
+    background-color: #f3f6f9;
     line-height: 1.6;
 }
 
@@ -17,8 +17,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #0A1F3D;
-    color: #F5F5F5;
+    background-color: #004080;
+    color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -26,7 +26,6 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #D4AF37; /* Gold for the logo */
 }
 
 .nav-links {
@@ -39,14 +38,14 @@ body {
 }
 
 .nav-links a {
-    color: #F5F5F5;
+    color: white;
     text-decoration: none;
     font-size: 1.1em;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #D4AF37; /* Gold on hover */
+    color: #ffd700;
     transform: translateY(-2px);
 }
 
@@ -54,17 +53,16 @@ body {
     display: none;
     font-size: 1.5em;
     cursor: pointer;
-    color: #F5F5F5;
 }
 
 /* Hero Section */
 .hero {
     height: 70vh;
-    background: linear-gradient(rgba(10, 31, 61, 0.8), rgba(10, 31, 61, 0.8)), url('https://via.placeholder.com/1200x400') center/cover;
+    background: linear-gradient(rgba(0, 64, 128, 0.7), rgba(0, 64, 128, 0.7)), url('https://raw.githubusercontent.com/jayrob895/doctorpardi/refs/heads/main/brandonpardi-1104192947.jpg-YNqNba4k7kTr3Xag.jpeg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #F5F5F5;
+    color: white;
     text-align: center;
     padding: 20px;
     animation: fadeIn 1.5s ease-in-out;
@@ -74,7 +72,6 @@ body {
     font-size: 3em;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    color: #D4AF37; /* Gold for the heading */
 }
 
 .hero-text p {
@@ -86,8 +83,8 @@ body {
 
 .btn {
     text-decoration: none;
-    background-color: #D4AF37; /* Gold button */
-    color: #0A1F3D; /* Navy text */
+    background-color: #ffd700;
+    color: #004080;
     padding: 12px 25px;
     border-radius: 5px;
     font-weight: bold;
@@ -96,7 +93,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #B5942E; /* Darker gold on hover */
+    background-color: #e6c200;
     transform: translateY(-2px);
 }
 
@@ -109,7 +106,7 @@ body {
 }
 
 .container h2 {
-    color: #0A1F3D; /* Navy for headings */
+    color: #004080;
     margin-bottom: 20px;
     font-size: 2.2em;
     position: relative;
@@ -119,7 +116,7 @@ body {
     content: '';
     width: 60px;
     height: 3px;
-    background-color: #D4AF37; /* Gold line under headings */
+    background-color: #ffd700;
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -134,8 +131,8 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #0A1F3D; /* Navy footer */
-    color: #F5F5F5;
+    background-color: #002040;
+    color: #ccc;
     text-align: center;
     padding: 20px;
     position: relative;
@@ -149,12 +146,12 @@ body {
     font-size: 0.9em;
 }
 
-/* Responsive Menu */
+/* Mobile Menu Styles */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #0A1F3D;
+        background-color: #004080;
         position: absolute;
         top: 60px;
         left: 0;
@@ -191,31 +188,5 @@ body {
     }
     to {
         opacity: 1;
-    }
-}
-/* Mobile Menu Styles */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #004080; /* Match navbar color */
-        position: absolute;
-        top: 60px; /* Adjust based on navbar height */
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        text-align: center;
-        margin: 15px 0;
-    }
-
-    .hamburger {
-        display: block;
     }
 }

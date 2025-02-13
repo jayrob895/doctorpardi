@@ -7,7 +7,7 @@ function toggleMenu() {
 // Function to load content dynamically
 function loadPage(page) {
     if (page === 'index.html') {
-        // If loading the home page, reset the content to the default home content
+        // Reset the content to the default home page content
         document.getElementById('content').innerHTML = `
             <div class="hero">
                 <div class="hero-text">
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks.forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault(); // Prevent default link behavior
-            const page = this.getAttribute('href'); // Get the href attribute
+            const page = this.getAttribute('onclick').replace("loadPage('", "").replace("')", ""); // Extract the page name
             loadPage(page); // Load the page dynamically
         });
     });

@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Contact Us</h2>
+    <p>Visit one of our three convenient locations or contact us directly.</p>
+    <div id="map" style="height: 400px;"></div>
+</div>
+<script>
+    function initMap() {
+        const locations = [
+            { lat: 34.0522, lng: -118.2437 },
+            { lat: 33.6846, lng: -117.8265 },
+            { lat: 34.1381, lng: -118.3534 }
+        ];
+
+        const map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: locations[0]
+        });
+
+        locations.forEach(loc => {
+            new google.maps.Marker({
+                position: loc,
+                map: map
+            });
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>

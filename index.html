@@ -47,22 +47,6 @@
         &copy; 2025 Dr. Brandon Pardi | Orthopedic Surgeon
     </footer>
 
-    <script>
-        // Function to toggle the mobile menu
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
-
-        // Function to load content dynamically
-        function loadPage(page) {
-            fetch(page)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('content').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading page:', error));
-        }
-    </script>
-
+    <script src="scripts.js"></script>
 </body>
 </html>

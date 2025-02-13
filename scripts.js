@@ -4,6 +4,12 @@ function toggleMenu() {
     navLinks.classList.toggle('active');
 }
 
+// Function to close the mobile menu
+function closeMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.remove('active');
+}
+
 // Function to load content dynamically
 function loadPage(page) {
     if (page === 'index.html') {
@@ -31,6 +37,9 @@ function loadPage(page) {
             })
             .catch(error => console.error('Error loading page:', error));
     }
+
+    // Close the mobile menu after loading the new content
+    closeMenu();
 }
 
 // Add event listeners to navigation links

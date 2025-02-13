@@ -1,4 +1,9 @@
-// Function to load content dynamically
+// Toggle mobile menu
+function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+}
+
+// Load content dynamically
 function loadPage(page) {
     fetch(`${page}.html`)
         .then(response => response.text())
@@ -8,10 +13,10 @@ function loadPage(page) {
         .catch(error => console.error('Error loading page:', error));
 }
 
-// Event listener for navbar links
+// Add event listeners to navbar links
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent default link behavior
+        e.preventDefault();
         const page = e.target.getAttribute('data-page');
         loadPage(page);
     });

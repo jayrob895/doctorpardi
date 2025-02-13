@@ -24,3 +24,11 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 
 // Load the home page by default
 loadPage('index');
+// Toggle mobile menu
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+}
+
+// Add event listener to the hamburger menu
+document.querySelector('.hamburger').addEventListener('click', toggleMenu);

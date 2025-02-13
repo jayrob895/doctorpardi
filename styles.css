@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    color: #333;
-    background-color: #f3f6f9;
+    color: #2C2C2C;
+    background-color: #FAFAFA;
     line-height: 1.6;
 }
 
@@ -17,8 +17,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #004080;
-    color: white;
+    background-color: #0A1F3D;
+    color: #F5F5F5;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -26,6 +26,7 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 1px;
+    color: #D4AF37; /* Gold for the logo */
 }
 
 .nav-links {
@@ -38,14 +39,14 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: #F5F5F5;
     text-decoration: none;
     font-size: 1.1em;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ffd700;
+    color: #D4AF37; /* Gold on hover */
     transform: translateY(-2px);
 }
 
@@ -53,16 +54,17 @@ body {
     display: none;
     font-size: 1.5em;
     cursor: pointer;
+    color: #F5F5F5;
 }
 
 /* Hero Section */
 .hero {
     height: 70vh;
-    background: linear-gradient(rgba(0, 64, 128, 0.7), rgba(0, 64, 128, 0.7)), url('https://via.placeholder.com/1200x400') center/cover;
+    background: linear-gradient(rgba(10, 31, 61, 0.8), rgba(10, 31, 61, 0.8)), url('https://via.placeholder.com/1200x400') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #F5F5F5;
     text-align: center;
     padding: 20px;
     animation: fadeIn 1.5s ease-in-out;
@@ -72,6 +74,7 @@ body {
     font-size: 3em;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #D4AF37; /* Gold for the heading */
 }
 
 .hero-text p {
@@ -83,8 +86,8 @@ body {
 
 .btn {
     text-decoration: none;
-    background-color: #ffd700;
-    color: #004080;
+    background-color: #D4AF37; /* Gold button */
+    color: #0A1F3D; /* Navy text */
     padding: 12px 25px;
     border-radius: 5px;
     font-weight: bold;
@@ -93,7 +96,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #e6c200;
+    background-color: #B5942E; /* Darker gold on hover */
     transform: translateY(-2px);
 }
 
@@ -106,7 +109,7 @@ body {
 }
 
 .container h2 {
-    color: #004080;
+    color: #0A1F3D; /* Navy for headings */
     margin-bottom: 20px;
     font-size: 2.2em;
     position: relative;
@@ -116,7 +119,7 @@ body {
     content: '';
     width: 60px;
     height: 3px;
-    background-color: #ffd700;
+    background-color: #D4AF37; /* Gold line under headings */
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -131,8 +134,8 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #002040;
-    color: #ccc;
+    background-color: #0A1F3D; /* Navy footer */
+    color: #F5F5F5;
     text-align: center;
     padding: 20px;
     position: relative;
@@ -151,7 +154,7 @@ body {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #004080;
+        background-color: #0A1F3D;
         position: absolute;
         top: 60px;
         left: 0;

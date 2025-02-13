@@ -3,25 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <meta name="description" content="Dr. Brandon Pardi - Expert Orthopedic Surgeon specializing in mobility, pain relief, and advanced surgical solutions.">
+    <meta name="keywords" content="Orthopedic Surgeon, Dr. Pardi, Orthopedics, Surgery, Pain Relief">
+    <meta name="author" content="Dr. Brandon Pardi">
+    <title>Dr. Brandon Pardi - Orthopedic Surgeon</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Navbar -->
+
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-logo">My Site</div>
-        <ul class="nav-links">
+        <div class="nav-logo">Dr. Pardi Orthopedics</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#" data-page="index">Home</a></li>
             <li><a href="#" data-page="about">About</a></li>
+            <li><a href="#" data-page="services">Services</a></li>
+            <li><a href="#" data-page="faq">FAQ</a></li>
             <li><a href="#" data-page="contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Content Container -->
-    <div id="content">
-        <!-- Content will be loaded here dynamically -->
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-text">
+            <img src="https://raw.githubusercontent.com/jayrob895/doctorpardi/refs/heads/main/brandonpardi-1104192947.jpg-YNqNba4k7kTr3Xag.jpeg" alt="Dr. Brandon Pardi">
+            <h1>Expert Orthopedic Care</h1>
+            <p>Specializing in mobility, pain relief, and advanced surgical solutions.</p>
+            <a href="#" data-page="contact" class="btn">Schedule a Consultation</a>
+        </div>
     </div>
 
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Welcome to Dr. Brandon Pardi's Orthopedic Practice</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Helping patients regain mobility and improve their quality of life with innovative surgical and non-surgical treatments.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2025 Dr. Brandon Pardi | Orthopedic Surgeon
+        <br>
+        <a href="https://github.com/jayrob895/doctorpardi" target="_blank">View on GitHub</a>
+    </footer>
+
+    <!-- External JavaScript -->
     <script src="javascript.js"></script>
 </body>
 </html>

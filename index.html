@@ -12,42 +12,44 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-logo">Dr. Pardi Orthopedics</div>
-        <div class="hamburger">
+        <div class="hamburger" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
         </div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#" data-page="home">Home</a></li>
-            <li><a href="#" data-page="about">About</a></li>
-            <li><a href="#" data-page="services">Services</a></li>
-            <li><a href="#" data-page="faq">FAQ</a></li>
-            <li><a href="#" data-page="contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <div class="hero">
         <div class="hero-text">
-            <img src="images/dr-pardi.jpg" alt="Dr. Brandon Pardi Portrait">
+            <img src="https://raw.githubusercontent.com/jayrob895/doctorpardi/refs/heads/main/brandonpardi-1104192947.jpg-YNqNba4k7kTr3Xag.jpeg">
             <h1>Expert Orthopedic Care</h1>
             <p>Specializing in mobility, pain relief, and advanced surgical solutions.</p>
-            <a href="#" data-page="contact" class="btn">Schedule a Consultation</a>
+            <a href="contact.html" class="btn">Schedule a Consultation</a>
         </div>
     </div>
 
     <!-- Main Content -->
-    <div id="content" class="container">
+    <div class="container">
         <h2>Welcome to Dr. Brandon Pardi's Orthopedic Practice</h2>
-        <p>Helping patients regain mobility and improve their quality of life with innovative surgical and non-surgical treatments.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Helping patients regain mobility and improve their quality of life with innovative surgical and non-surgical treatments.</p>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
         &copy; 2025 Dr. Brandon Pardi | Orthopedic Surgeon
-        <br>
-        <a href="https://github.com/jayrob895/doctorpardi" target="_blank">View on GitHub</a>
     </footer>
 
-    <!-- External JavaScript -->
-    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+
 </body>
 </html>

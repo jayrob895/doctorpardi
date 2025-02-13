@@ -1,29 +1,22 @@
-// script.js - Fixed Version for Single Page Navigation
-
 document.addEventListener('DOMContentLoaded', () => {
     // Toggle mobile menu
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.getElementById('navLinks');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+    document.querySelector('.hamburger').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('active');
     });
 
-    // Function to load content dynamically
+    // Load page content dynamically
     function loadPage(page) {
         fetch(`pages/${page}.html`)
             .then(response => {
-                if (!response.ok) {
-                    throw new Error('Page not found');
-                }
+                if (!response.ok) throw new Error(`Page ${page} not found`);
                 return response.text();
             })
             .then(html => {
                 document.getElementById('content').innerHTML = html;
             })
             .catch(error => {
+                console.error('Error loading page:', error);
                 document.getElementById('content').innerHTML = `<p>Sorry, the page could not be loaded.</p>`;
-                console.error(error);
             });
     }
 
@@ -33,16 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const page = e.target.getAttribute('data-page');
             loadPage(page);
-            window.location.hash = page;
+            window.history.pushState({ page }, '', `#${page}`);
         });
     });
 
-    // Load page based on URL hash or default to 'index'
-    const initialPage = window.location.hash.replace('#', '') || 'index';
-    loadPage(initialPage);
+    // Load the home page by default
+    loadPage('home');
 
-    window.addEventListener('hashchange', () => {
-        const newPage = window.location.hash.replace('#', '') || 'index';
-        loadPage(newPage);
+    // Handle browser navigation
+    window.addEventListener('popstate', event => {
+        if (event.state && event.state.page) {
+            loadPage(event.state.page);
+        }
     });
 });

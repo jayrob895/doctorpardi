@@ -16,28 +16,30 @@
             <i class="fas fa-bars"></i>
         </div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" onclick="loadPage('index.html')">Home</a></li>
+            <li><a href="#" onclick="loadPage('about.html')">About</a></li>
+            <li><a href="#" onclick="loadPage('services.html')">Services</a></li>
+            <li><a href="#" onclick="loadPage('faq.html')">FAQ</a></li>
+            <li><a href="#" onclick="loadPage('contact.html')">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-text">
-            <img src="https://raw.githubusercontent.com/jayrob895/doctorpardi/refs/heads/main/brandonpardi-1104192947.jpg-YNqNba4k7kTr3Xag.jpeg">
-            <h1>Expert Orthopedic Care</h1>
-            <p>Specializing in mobility, pain relief, and advanced surgical solutions.</p>
-            <a href="contact.html" class="btn">Schedule a Consultation</a>
+    <!-- Content Section -->
+    <div id="content">
+        <!-- Default Home Content -->
+        <div class="hero">
+            <div class="hero-text">
+                <img src="https://raw.githubusercontent.com/jayrob895/doctorpardi/refs/heads/main/brandonpardi-1104192947.jpg-YNqNba4k7kTr3Xag.jpeg">
+                <h1>Expert Orthopedic Care</h1>
+                <p>Specializing in mobility, pain relief, and advanced surgical solutions.</p>
+                <a href="#" onclick="loadPage('contact.html')" class="btn">Schedule a Consultation</a>
+            </div>
         </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="container">
-        <h2>Welcome to Dr. Brandon Pardi's Orthopedic Practice</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Helping patients regain mobility and improve their quality of life with innovative surgical and non-surgical treatments.</p>
+        <div class="container">
+            <h2>Welcome to Dr. Brandon Pardi's Orthopedic Practice</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Helping patients regain mobility and improve their quality of life with innovative surgical and non-surgical treatments.</p>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -46,8 +48,19 @@
     </footer>
 
     <script>
+        // Function to toggle the mobile menu
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Function to load content dynamically
+        function loadPage(page) {
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading page:', error));
         }
     </script>
 
